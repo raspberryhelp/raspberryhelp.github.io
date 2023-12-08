@@ -1,0 +1,193 @@
+/* You can either copy the below and paste it between style tags on your HTML page, OR you can copy this to a file and name it .css and link it from your HTML page. */
+:root {
+  --bg-color:215, 248, 229;
+  --border-color:#1d1d63;
+  --subtitle-color:#35a363;
+  --link-color:#0f9646;
+  --nav-color:15,7,92;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  background-color:#a7efb8;
+  background-attachment:fixed;
+  background-image:url('https://sadhost.neocities.org/images/tiles/stars4.gif');
+  
+}
+body a {
+  color:var(--link-color);
+}
+header {
+  width:400px;
+  background-image:url('https://static1.personality-database.com/profile_images/61023fa6a4b64934bf250438127dd687.png');
+  background-repeat: no-repeat;
+  background-size:90%;
+  margin-bottom:20px;
+  margin-left:10px;
+  margin-right:10px;
+  
+}
+.flex {
+  display:flex;
+  margin-top:10px;
+}
+.sidebar {
+   /*background-color:rgba(var(--bg-color),0.9);*/
+  
+  border-image: linear-gradient(#0f075c, #142a74, #406598,#7498c8) 30;
+  border-width: 4px;
+  border-style: solid;
+  
+  background-image:url('https://sadhost.neocities.org/images/tiles/bk024.gif');
+  max-width:250px;
+  width:auto;
+  height:auto;
+  margin-left:10px;
+  
+  position:right;
+}
+
+.right > article {
+  /*background-color:rgba(var(--bg-color),0.9);*/
+  background-color:white;
+  background-image:url('https://sadhost.neocities.org/images/tiles/bk024.gif');
+  
+
+  
+  border-image: linear-gradient(#0f075c, #142a74) 30;
+  border-width: 4px;
+  border-style: solid;
+  
+  height:auto;
+  width:250px;
+  margin-top:15px;
+  margin-bottom:20px;
+  margin-left:10px;
+  margin-right:10px;
+  
+}
+  
+article.background-image
+{
+  opacity: 0.5;
+  
+}
+article {
+  /*background-color:rgba(var(--bg-color),0.9);*/
+  background-color:white;
+  background-image:url('https://sadhost.neocities.org/images/tiles/bk024.gif');
+  
+
+  
+  border-image: linear-gradient(#0f075c, #142a74) 30;
+  border-width: 6px;
+  border-style: solid;
+  
+  margin-top:20px;
+  max-width:370px;
+  margin-left:10px;
+  margin-right:10px;
+  
+}
+
+
+
+.subtitle {
+  color:var(--subtitle-color);
+  font-size:18px;
+  font-weight:bold;
+  border-bottom:2px solid var(--subtitle-color);
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:10px;
+  text-align:center;
+  padding-top:20px;
+}
+article > p {
+  padding:2px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+p + ul {
+    margin-top: -20px;
+}
+.links {
+  list-style-type:'+';
+  font-size:16px;
+  
+}
+.links li a {
+  color:var(--link-color);
+  letter-spacing:1px;
+  text-decoration:none;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 10;
+}
+
+main {
+  margin-top:-21px;
+}
+   section > p {
+     padding:10px;
+   }
+footer {
+  color:var(--link-color);
+  margin-left:20px;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size:12px;
+  text-align: center;
+}
+
+nav {
+	height: 40px;
+    background: rgba(var(--nav-color),0.7);
+    width: 100%;
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	
+}
+nav ul{
+	display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content:space-evenly;
+}
+
+nav li{
+	padding-top:10px;
+}
+ @media only screen and (max-width: 630px) {
+   .sidebar {
+     position:relative;
+     max-width:100%;
+     width:160%;
+     height:150px;
+     display:flex;
+     flex-direction:row;
+     flex-wrap:wrap;
+     overflow:hidden;
+   }
+   .flex {
+     flex-wrap:wrap;
+     flex-direction:row;
+   }
+   .right {
+     order:1;
+     width:100%;
+   }
+   .left {
+     order:2;
+   }
+   section {
+     display:flex;
+     flex-wrap:wrap;
+     width:120px;
+   }
+}

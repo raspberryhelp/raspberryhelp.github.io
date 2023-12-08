@@ -1,0 +1,130 @@
+<!-- Everything here goes inside of your <body></body> tags! -->
+<!-- based on http://www.lovelyd.shukuya.com/divs/34/index.htm -->
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="voidseaicon.png"> 
+<title> Void Sea </title>
+<head> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<nav id="navbar">
+                    <ul>
+                        <div title=":D"><li><a href="index.html">Home</a></li></div>
+                        <div title="just random shit"><li><a href="nonsense.html">Nonsense</a></li></div>
+                        <div title="credits page cuz i dont want to keep updating every page"><li><a href="credits.html">Credits</a></li></div>
+                    </ul>
+                </nav>
+
+<div class="container">
+  
+  <aside class="flex">
+  <header></header>
+  
+  
+    <div class="left">
+      
+      <main>
+	  
+			
+       
+        <article>
+        <div class="subtitle"> Welcome</div>
+          <p>Welcome to THE VOID SEA. This is just a simple website for my own musings and interests. Really rudimentary at the moment, but feel free to look at it.</p>
+          <p>Last Updated: <span id="lastupdate"></span></p>
+          <p>You are Visitor #: <span id="hitcount"></span></p>
+          <p>This site is NOT mobile friendly (yet)</p>
+        </article>
+        
+        <article>
+        <div class="subtitle">About me</div>
+          <p>
+            <ul class = "links">
+              <li> CS Major but I have the capability of a potato.</li>
+              <li> Draws when I can. It's mostly just trashy anime photos </li>
+              <li> She/Her, They/Them </li>
+              <li> Aromantic </li>
+              <li> Likes coffee </li>
+            </ul>
+        </article>
+        
+        <article>
+        <div class="subtitle">Buttons or whatever</div>
+          <p>
+            My mood:
+            <a href="https://www.imood.com/users/sirenkidu"><img src="https://moods.imood.com/display/uname-sirenkidu/fg-FFFFFF/bg-093c0d/imood.gif" alt="The current mood of sirenkidu at www.imood.com" border="0"></a>
+            <br>
+            Internet Mood:
+            <a href="https://www.imood.com/imood"><img src="https://moods.imood.com/internet/current.gif"  alt="The current mood of the Internet at www.imood.com" border="0"></a>
+          </p>
+        </article>
+        
+        
+        
+        <article>
+          <div class="subtitle">People allowed to roast me</div>
+          <p>
+            <ul class = "links">
+              <li> Hans - Fate franchise</li>
+              <li> Sacramouche - Genshin Impact </li>
+              <li> Dorothy - Golden Girls </li>
+            </ul>
+        </article>
+        
+        
+      </main>
+      
+    </div>
+    <div class="right">
+      <aside class="sidebar">
+        <section>
+        <div class="subtitle">Hall of musical fame</div>
+        <p> Behold, the hall of music. The list of exemplary tracks is ever growing.</p> 
+        <ul class="links">
+          <li><a href="https://www.youtube.com/watch?v=rnnqoFzT6p0">The Meaning Of His Tears (OFF) </a></li>
+           <li><a href="https://www.youtube.com/watch?v=KWJdSz9PKpQ">Pure White Lands (Yume 2kki)</a></li>
+           <li><a href="https://www.youtube.com/watch?v=jdVsJWBKZQo">Caught In Our Thoughts - CMA </a></li>
+        </ul>
+        </section>
+      </aside>
+      
+       <article>
+        <div class="subtitle">Unfunny facts about me </div>
+          <ul class = "links">
+              <li>i am a proud own her of plushies esp habibi from genshin</li>
+              <li>i made 0.09 in 2022 from steam trades</li>
+              <li>i wasted my yearbook quote on an unfunny inside joke on genshin</li>
+              <li>i dont have emiya archer in fgo</li>
+              <li><b>I know what you are.</b></li>
+              <li>homestuck 2 ate my children</li>
+            </ul>
+        </article>
+        
+    </div>
+    <header></header>
+  </div>
+<footer> 2022 -  <script>document.write( new Date().getFullYear() );</script>   </footer>
+</div>
+</html>
+
+<!-- this is not mine lol thanks sadgrl :') -->
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+        var num_arr = site_data.info.views.toString().split("");
+        var num_str = "";
+        for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+        }
+        document.getElementById("hitcount").innerHTML = num_str;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=redcamel", true);
+xhttp.send();
+</script>
